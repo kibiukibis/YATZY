@@ -37,6 +37,8 @@ const grand = document.querySelector('.player .grand');
 
 const newGame = document.querySelector('.new-game');
 
+var audio = new Audio('pop.mp3');
+
 var max = 0;
 var count = 3;
 var playerNr = 1;
@@ -169,6 +171,7 @@ diceBtn.addEventListener('click', function() {
         diceCount.textContent = `0 rolls left`;
         return;
     }
+    audio.play();
     if (count == 1) {
         btnContent.textContent = "Take points";
     } else { btnContent.textContent = "Roll dices"; }
