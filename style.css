@@ -1,0 +1,290 @@
+body {
+    font-family: monospace;
+    text-align: center;
+    background-image: url("img/chalkboard.jpg");
+    background-position: center;
+    background-size: cover;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+.game-board {
+    display: flex;
+    display: -webkit-flex;
+    justify-content: space-around; 
+    align-items: center;
+    -webkit-justify-content: space-around; 
+    -webkit-align-items: center;
+    height: 100vh;
+    max-width: 1200px;
+    margin: auto;
+}
+
+.right {
+    position: relative;
+    width: 50%;
+    height: 500px;
+}
+
+li {
+    /* display: inline-block; */
+    width: 120px;
+    color: white;
+    font-size: 20px;
+    border: 2px solid white;
+    border-radius: 10px;
+    line-height: 30px;
+    cursor: pointer;
+}
+
+.game {
+    position: relative;
+    display: inline-block;
+    width: 520px;
+    height: 250px;
+    border: 2px solid white;
+    border-radius: 10px;
+    overflow: hidden;
+    background: rgba(0, 0, 0, 0.4);
+}
+
+.new-game-window {
+    position: relative;
+    display: inline-block;
+    width: 520px;
+    height: 250px;
+    border: 2px solid white;
+    border-radius: 10px;
+    overflow: hidden;
+    margin: auto;
+    display: none;
+    text-align: center;
+    background: rgba(0, 0, 0, 0.4);
+}
+
+.win-win {
+    position: relative;
+    display: inline-block;
+    width: 520px;
+    height: 250px;
+    border: 2px solid white;
+    border-radius: 10px;
+    overflow: hidden;
+    margin: auto;
+    display: none;
+    text-align: center;
+    background: rgba(0, 0, 0, 0.4);
+}
+
+.new-game-window input {
+    margin-top: 40px;
+    line-height: 40px;
+    width: 200px;
+    font-size: 20px;
+    font-family: 'Dancing Script', cursive;
+    padding-left: 10px;
+}
+
+.new-game-window p,
+.win-win p {
+    display: block;
+    width: 200px;
+    color: white;
+    line-height: 30px;
+    font-size: 20px;
+    border: 2px solid white;
+    border-radius: 10px;
+    cursor: pointer;
+    margin: 20px auto;
+}
+
+.dice {
+    margin-top: 10px;
+    height: 120px;
+    display: inline-block;
+    text-align: center;
+    position: relative;
+}
+
+.dice h3 {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: 10px;
+    font-size: 20px;
+    color: red;
+    display: none;
+    transition: .2s;
+}
+
+.game img {
+    width: 50px;
+    height: 50px;
+    cursor: pointer;
+    margin: 0 15px;
+    margin-bottom: 10px;
+    margin-top: 30px;
+    transition: .3s;
+}
+
+.game .dice-btn {
+    position: absolute;
+    left: 50%;
+    bottom: 30px;
+    transform: translateX(-50%);
+    display: block;
+    width: 200px;
+    color: white;
+    line-height: 30px;
+    font-size: 20px;
+    border: 2px solid white;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+.game span {
+    display: block;
+}
+
+.result-table {
+    background-image: url("img/paper.png");
+    background-position: center;
+    background-size: cover;
+    width: 450px;
+    height: 596px;
+    text-align: left;
+}
+
+.wrapper {
+    padding-left: 10px;
+    width: 100px;
+}
+
+.wrapper,
+.player {
+    font-family: 'Dancing Script', cursive;
+    text-align: left;
+    display: inline-block;
+}
+
+.player {
+    width: 65px;
+    text-align: center;
+    padding-right: 10px;
+}
+
+.name {
+    margin-bottom: 11px;
+    margin-top: 5px;
+    height: 26px;
+}
+
+.wrapper .line,
+.player {
+    font-size: 18px;
+    line-height: 31px;
+}
+
+.player .line {
+    cursor: pointer;
+}
+
+.new-game-window h4 {
+    font-size: 16px;
+    color: white;
+}
+
+.win-win h5 {
+    font-size: 16px;
+    color: white;
+    margin-top: 50px;
+}
+
+.win-win h4 {
+    font-size: 16px;
+    color: white;
+    margin-top: 20px;
+}
+
+.player {
+    height: 100%;
+    vertical-align: top;
+    border-right: 1px solid black;
+}
+
+nav {
+    /* position: absolute;
+    top: 0;
+    left: 0; */
+    z-index: 10;
+    position: relative;
+}
+
+nav ul {
+    font-size: 0;
+    margin: 0;
+    padding: 0;
+    display: flex;
+ display: -webkit-flex;
+
+    justify-content: space-around;
+    -webkit-justify-content: space-around;
+}
+
+nav ul li {
+    display: inline-block;
+    background: rgba(0, 0, 0, 0.4);
+}
+
+nav ul li a {
+    color: #fff;
+    display: block;
+    font-size: 18px;
+    padding: 10px 14px;
+    transition: 0.3s linear;
+}
+
+nav ul li:hover {
+    background: rgba(0, 0, 0, 0.8);
+}
+
+.remind {
+    width: 15px;
+}
+
+nav ul li ul {
+    display: none;
+    position: absolute;
+    right: 50%;
+    top: 55px;
+    transform: translateX(50%);
+    width: 500px;
+    z-index: 500;
+}
+
+nav ul li ul li {
+    /* border-top: 1px solid #444; */
+    display: block;
+    font-size: 14px;
+    width: 500px;
+    background: rgba(0, 0, 0, 1);
+    z-index: 500;
+}
+
+
+/* nav ul li ul li:first-child {
+    border-top: none;
+} */
+
+nav ul li ul li a {
+    background: #373737;
+    display: block;
+    padding: 10px 14px;
+}
+
+nav ul li ul li a:hover {
+    background: #126d9b;
+}
